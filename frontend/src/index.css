@@ -1,8 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Custom overrides */
+/* Layered so Tailwind utilities still take precedence, as in v3 */
+@layer base {
 :root {
   --bg: #0a0a0f;
   --bg-subtle: #12121a;
@@ -31,7 +30,9 @@ body {
 }
 
 h1, h2, h3 { font-weight: 600; }
+}
 
+@layer components {
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -106,3 +107,4 @@ h1, h2, h3 { font-weight: 600; }
 .tag-concurrency-goroutines { background: #5a5a7a; color: #e8e8ec; }
 .tag-concurrency-async { background: #4a7a5a; color: #e8e8ec; }
 .tag-concurrency-event { background: #5a4a7a; color: #e8e8ec; }
+}
