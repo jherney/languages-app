@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom overrides */
+:root {
+  --bg: #0a0a0f;
+  --bg-subtle: #12121a;
+  --fg: #e8e8ec;
+  --muted: #6b6b80;
+  --accent: #00d4aa;
+  --card: #16161f;
+  --border: #2a2a3a;
+}
+
+.dark {
+  --bg: #0a0a0f;
+  --bg-subtle: #12121a;
+  --fg: #e8e8ec;
+  --muted: #6b6b80;
+  --accent: #00d4aa;
+  --card: #16161f;
+  --border: #2a2a3a;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+}
+
+h1, h2, h3 { font-weight: 600; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+}
+.btn-primary:hover {
+  background: #00f0c0;
+}
+
+/* Filter chips */
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid #2a2a3a;
+  color: #6b6b80;
+  cursor: pointer;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  transition: all 0.2s;
+}
+.filter-chip.active {
+  background: #00d4aa;
+  color: #0a0a0f;
+  border-color: #00d4aa;
+}
+
+/* Cards */
+.card {
+  background: #16161f;
+  border: 1px solid #2a2a3a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* Logos */
+.logo { width: 40px; height: 40px; object-fit: contain; margin-right: 1rem; }
+
+/* Tags */
+.tag {
+  display: inline-block;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 0.25rem;
+}
+.tag-dynamic { background: #4a4a6a; color: #e8e8ec; }
+.tag-static { background: #5a5a7a; color: #e8e8ec; }
+.tag-no-gc { background: #7a4a4a; color: #e8e8ec; }
+.tag-gc { background: #4a7a5a; color: #e8e8ec; }
+.tag-concurrency-goroutines { background: #5a5a7a; color: #e8e8ec; }
+.tag-concurrency-async { background: #4a7a5a; color: #e8e8ec; }
+.tag-concurrency-event { background: #5a4a7a; color: #e8e8ec; }

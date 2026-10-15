@@ -1,0 +1,101 @@
+[
+  {
+    "id": "python",
+    "name": "Python",
+    "paradigm": "multi-paradigm",
+    "year": 1991,
+    "creator": "Guido van Rossum",
+    "typing": "dynamic",
+    "gc": "reference counting",
+    "concurrency": "GIL, asyncio",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/5/57/Python-logo.png"
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "paradigm": "multi-paradigm",
+    "year": 1995,
+    "creator": "Brendan Eich",
+    "typing": "dynamic",
+    "gc": "mark-and-sweep",
+    "concurrency": "event loop",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6e/JavaScript-logo.png"
+  },
+  {
+    "id": "rust",
+    "name": "Rust",
+    "paradigm": "systems",
+    "year": 2010,
+    "creator": "Graydon Hoare",
+    "typing": "static",
+    "gc": "none",
+    "concurrency": "async/await, threads",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_logo.svg"
+  },
+  {
+    "id": "go",
+    "name": "Go",
+    "paradigm": "systems",
+    "year": 2009,
+    "creator": "Robert Griesemer, Rob Pike, Ken Thompson",
+    "typing": "static",
+    "gc": "concurrent",
+    "concurrency": "goroutines, channels",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Go_logo_2016.svg"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "paradigm": "multi-paradigm",
+    "year": 2012,
+    "creator": "Microsoft",
+    "typing": "static",
+    "gc": "garbage collection",
+    "concurrency": "async/await",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1b/TypeScript_logo_2020.svg"
+  },
+  {
+    "id": "java",
+    "name": "Java",
+    "paradigm": "object-oriented",
+    "year": 1995,
+    "creator": "James Gosling",
+    "typing": "static",
+    "gc": "garbage collection",
+    "concurrency": "threads, virtual threads",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/30/Java_logo.svg"
+  },
+  {
+    "id": "csharp",
+    "name": "C#",
+    "paradigm": "object-oriented",
+    "year": 2000,
+    "creator": "Microsoft",
+    "typing": "static",
+    "gc": "garbage collection",
+    "concurrency": "async/await, threads",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6c/C_Sharp_logo.png"
+  },
+  {
+    "id": "cpp",
+    "name": "C++",
+    "paradigm": "systems",
+    "year": 1985,
+    "creator": "Bjarne Stroustrup",
+    "typing": "static",
+    "gc": "none",
+    "concurrency": "threads, async",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/18/C%2B%2B_Logo.png"
+  },
+  {
+    "id": "swift",
+    "name": "Swift",
+    "paradigm": "systems",
+    "year": 2014,
+    "creator": "Apple",
+    "typing": "static",
+    "gc": "ARC",
+    "concurrency": "async/await, threads",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/9/98/Swift_logo.svg"
+  }
+]
