@@ -14,39 +14,36 @@ pip install -r requirements.txt
 cd frontend && npm install
 ```
 
-## Running in development
+## Running
 
-Start the API (port 8000):
+Build the frontend once, then start the server:
 
 ```bash
+cd frontend && npm run build && cd ..   # type-checks, then builds into frontend/dist
 ./runner.sh
 ```
 
-In a second terminal, start the frontend:
+Open http://localhost:8000. The backend serves both the app and the API. Rebuild after changing the frontend, and restart the server after changing the backend or `languages.json`.
 
-```bash
-cd frontend
-npm run dev
-```
+If `frontend/dist` doesn't exist, the backend serves only the API, and http://localhost:8000/ returns `{"detail":"Not Found"}`.
 
-Open the URL Vite prints: http://localhost:5173, or the next free port if 5173 is taken. The Vite dev server forwards `/api` requests to the backend on port 8000. Port 8000 serves only the API, so http://localhost:8000/ itself returns `{"detail":"Not Found"}`.
-
-## Building
-
-```bash
-cd frontend
-npm run build     # type-checks, then builds into frontend/dist
-npm run preview   # serves the build on port 4173, also proxying /api
-```
-
-To run the API with multiple workers, use gunicorn from `backend/`:
+To run with multiple workers, use gunicorn from `backend/`:
 
 ```bash
 cd backend
 gunicorn -c gunicorn_config.py app:app
 ```
 
-The backend serves only the API. Neither part serves `frontend/dist` in production, so put a web server such as nginx in front: serve the built files, and proxy `/api` to port 8000.
+## Frontend development
+
+For live reloading while editing the frontend, keep `./runner.sh` running and start Vite in a second terminal:
+
+```bash
+cd frontend
+npm run dev
+```
+
+Open the URL Vite prints: http://localhost:5173, or the next free port if 5173 is taken. Vite forwards `/api` requests to the backend on port 8000.
 
 ## API
 
@@ -81,10 +78,10 @@ Interactive API docs are at http://localhost:8000/docs while the backend is runn
 ## Layout
 
 ```
-backend/            FastAPI app (app.py) and gunicorn config
+backend/            FastAPI app (app.py): API + built frontend; gunicorn config
 frontend/           React + Vite + Tailwind app
   src/App.tsx       Cards and filters
   src/index.css     Tailwind import and custom styles
 languages.json      Language data
-runner.sh           Starts the API on 127.0.0.1:8000
+runner.sh           Starts the server on 127.0.0.1:8000
 ```

@@ -1,10 +1,12 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 from typing import List
 import json
 import os
 
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(APP_DIR, "..", "languages.json")
+FRONTEND_DIST = os.path.join(APP_DIR, "..", "frontend", "dist")
 
 with open(DATA_PATH) as f:
     languages = json.load(f)
@@ -30,3 +32,9 @@ def get_language(language_id: str):
         if lang["id"] == language_id:
             return lang
     raise HTTPException(status_code=404, detail="Language not found")
+
+
+# Serve the built frontend at /. Mounted last so the API routes above take
+# precedence. Skipped until `npm run build` has produced frontend/dist.
+if os.path.isdir(FRONTEND_DIST):
+    app.mount("/", StaticFiles(directory=FRONTEND_DIST, html=True), name="frontend")
