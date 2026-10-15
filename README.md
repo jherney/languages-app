@@ -29,7 +29,7 @@ cd frontend
 npm run dev
 ```
 
-Open http://localhost:5173. The Vite dev server forwards `/api` requests to the backend on port 8000.
+Open the URL Vite prints: http://localhost:5173, or the next free port if 5173 is taken. The Vite dev server forwards `/api` requests to the backend on port 8000. Port 8000 serves only the API, so http://localhost:8000/ itself returns `{"detail":"Not Found"}`.
 
 ## Building
 
