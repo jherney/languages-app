@@ -73,7 +73,10 @@ Interactive API docs are at http://localhost:8000/docs while the backend is runn
 }
 ```
 
-An optional `sources` array of URLs cites where the entry's facts come from. The URLs are shown as links on the card.
+Selecting a card opens a dialog with the language's details. Two optional fields add to it:
+
+- `learn` is a getting-started guide: `intro` (a short paragraph), `hello` (a Hello World program), `run` (the commands to run it) and `resources` (a list of `{ "label", "url" }` links).
+- `sources` is an array of URLs citing where the entry's facts come from, shown as links in the dialog.
 
 `concurrency` is a comma-separated list, and each item becomes its own filter option. The filter options come from the data, so new values show up automatically. The backend reads the file at startup, so restart it after editing.
 

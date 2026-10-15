@@ -8,7 +8,22 @@
     "typing": "dynamic",
     "gc": "reference counting",
     "concurrency": "GIL, asyncio",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/5/57/Python-logo.png"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/5/57/Python-logo.png",
+    "learn": {
+      "intro": "Python's syntax is short and readable, and you can try code a line at a time by running python3 with no arguments to open the interactive interpreter. Install it from python.org, then work through the official tutorial, which starts from the basics.",
+      "hello": "print(\"Hello, world!\")",
+      "run": "python3 hello.py",
+      "resources": [
+        {
+          "label": "The Python Tutorial",
+          "url": "https://docs.python.org/3/tutorial/"
+        },
+        {
+          "label": "Download Python",
+          "url": "https://www.python.org/downloads/"
+        }
+      ]
+    }
   },
   {
     "id": "javascript",
@@ -19,7 +34,26 @@
     "typing": "dynamic",
     "gc": "mark-and-sweep",
     "concurrency": "event loop",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6e/JavaScript-logo.png"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6e/JavaScript-logo.png",
+    "learn": {
+      "intro": "Every web browser runs JavaScript, so you can start without installing anything: open your browser's developer tools and type into the Console. To run JavaScript files outside the browser, install Node.js.",
+      "hello": "console.log(\"Hello, world!\");",
+      "run": "node hello.js",
+      "resources": [
+        {
+          "label": "MDN: JavaScript for beginners",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting"
+        },
+        {
+          "label": "MDN JavaScript Guide",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+        },
+        {
+          "label": "Download Node.js",
+          "url": "https://nodejs.org/en/download"
+        }
+      ]
+    }
   },
   {
     "id": "rust",
@@ -30,7 +64,30 @@
     "typing": "static",
     "gc": "none",
     "concurrency": "async/await, threads",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_logo.svg"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_logo.svg",
+    "learn": {
+      "intro": "Install Rust with rustup, which also installs Cargo, Rust's build tool and package manager. The free book The Rust Programming Language is the usual starting point. Ownership and borrowing are the ideas most newcomers haven't seen before, and the book covers them in chapter 4. Rustlings gives you small exercises to practise with.",
+      "hello": "fn main() {\n    println!(\"Hello, world!\");\n}",
+      "run": "cargo new hello\ncd hello\ncargo run",
+      "resources": [
+        {
+          "label": "The Rust Programming Language",
+          "url": "https://doc.rust-lang.org/book/"
+        },
+        {
+          "label": "Install Rust",
+          "url": "https://rust-lang.org/tools/install/"
+        },
+        {
+          "label": "Rustlings exercises",
+          "url": "https://github.com/rust-lang/rustlings"
+        },
+        {
+          "label": "Rust Playground",
+          "url": "https://play.rust-lang.org/"
+        }
+      ]
+    }
   },
   {
     "id": "go",
@@ -41,7 +98,26 @@
     "typing": "static",
     "gc": "concurrent",
     "concurrency": "goroutines, channels",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Go_logo_2016.svg"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Go_logo_2016.svg",
+    "learn": {
+      "intro": "A Tour of Go teaches the language in short lessons that run in your browser, so you can start before installing anything. Once you've done the tour, install Go to build programs on your own machine.",
+      "hello": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tfmt.Println(\"Hello, world!\")\n}",
+      "run": "go run hello.go",
+      "resources": [
+        {
+          "label": "A Tour of Go",
+          "url": "https://go.dev/tour/"
+        },
+        {
+          "label": "Install Go",
+          "url": "https://go.dev/doc/install"
+        },
+        {
+          "label": "Go Playground",
+          "url": "https://go.dev/play/"
+        }
+      ]
+    }
   },
   {
     "id": "typescript",
@@ -52,7 +128,26 @@
     "typing": "static",
     "gc": "garbage collection",
     "concurrency": "async/await",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1b/TypeScript_logo_2020.svg"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1b/TypeScript_logo_2020.svg",
+    "learn": {
+      "intro": "TypeScript is JavaScript with type annotations, so it helps to know some JavaScript first. You can experiment in the TypeScript Playground without installing anything. Locally, the tsc compiler checks your types and turns .ts files into plain JavaScript.",
+      "hello": "const greeting: string = \"Hello, world!\";\nconsole.log(greeting);",
+      "run": "npm install --save-dev typescript\nnpx tsc hello.ts\nnode hello.js",
+      "resources": [
+        {
+          "label": "TypeScript Handbook",
+          "url": "https://www.typescriptlang.org/docs/handbook/intro.html"
+        },
+        {
+          "label": "TypeScript Playground",
+          "url": "https://www.typescriptlang.org/play/"
+        },
+        {
+          "label": "Install TypeScript",
+          "url": "https://www.typescriptlang.org/download/"
+        }
+      ]
+    }
   },
   {
     "id": "java",
@@ -63,7 +158,26 @@
     "typing": "static",
     "gc": "garbage collection",
     "concurrency": "threads, virtual threads",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/30/Java_logo.svg"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/30/Java_logo.svg",
+    "learn": {
+      "intro": "Install a JDK (Java Development Kit). Since JDK 11 you can run a single source file directly with java Hello.java, without compiling it first, which keeps early experiments simple. dev.java, Oracle's official learning site, has tutorials from the basics up.",
+      "hello": "public class Hello {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, world!\");\n    }\n}",
+      "run": "java Hello.java",
+      "resources": [
+        {
+          "label": "Learn Java (dev.java)",
+          "url": "https://dev.java/learn/"
+        },
+        {
+          "label": "Download a JDK",
+          "url": "https://dev.java/download/"
+        },
+        {
+          "label": "JEP 330: single-file programs",
+          "url": "https://openjdk.org/jeps/330"
+        }
+      ]
+    }
   },
   {
     "id": "csharp",
@@ -74,7 +188,26 @@
     "typing": "static",
     "gc": "garbage collection",
     "concurrency": "async/await, threads",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6c/C_Sharp_logo.png"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6c/C_Sharp_logo.png",
+    "learn": {
+      "intro": "Install the .NET SDK, which includes the C# compiler and the dotnet command-line tool. New console projects use top-level statements, so a complete program can be a single line. Microsoft Learn's tour of C# introduces the language.",
+      "hello": "Console.WriteLine(\"Hello, World!\");",
+      "run": "dotnet new console -o hello\ncd hello\ndotnet run",
+      "resources": [
+        {
+          "label": "A tour of C#",
+          "url": "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/"
+        },
+        {
+          "label": "Create a console app",
+          "url": "https://learn.microsoft.com/en-us/dotnet/core/tutorials/create-console-app"
+        },
+        {
+          "label": "Download .NET",
+          "url": "https://dotnet.microsoft.com/en-us/download"
+        }
+      ]
+    }
   },
   {
     "id": "cpp",
@@ -85,7 +218,26 @@
     "typing": "static",
     "gc": "none",
     "concurrency": "threads, async",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/18/C%2B%2B_Logo.png"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/18/C%2B%2B_Logo.png",
+    "learn": {
+      "intro": "You'll need a compiler: GCC or Clang on Linux and macOS, or Visual Studio on Windows. C++ is a large language, so a structured course helps. LearnCpp.com is a free online tutorial, and cppreference.com is the standard reference once you know the basics.",
+      "hello": "#include <iostream>\n\nint main() {\n    std::cout << \"Hello, world!\\n\";\n}",
+      "run": "g++ hello.cpp -o hello\n./hello",
+      "resources": [
+        {
+          "label": "LearnCpp.com",
+          "url": "https://www.learncpp.com/"
+        },
+        {
+          "label": "Get started (isocpp.org)",
+          "url": "https://isocpp.org/get-started"
+        },
+        {
+          "label": "cppreference.com",
+          "url": "https://en.cppreference.com/w/cpp"
+        }
+      ]
+    }
   },
   {
     "id": "swift",
@@ -96,7 +248,26 @@
     "typing": "static",
     "gc": "ARC",
     "concurrency": "async/await, threads",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/9/98/Swift_logo.svg"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/9/98/Swift_logo.svg",
+    "learn": {
+      "intro": "Swift runs on macOS, Linux and Windows. Install it from swift.org (on a Mac, Xcode includes it), then read The Swift Programming Language, which opens with a guided tour. Swift Package Manager can generate a ready-to-run Hello World project.",
+      "hello": "print(\"Hello, world!\")",
+      "run": "mkdir Hello && cd Hello\nswift package init --name Hello --type executable\nswift run",
+      "resources": [
+        {
+          "label": "Getting started with Swift",
+          "url": "https://www.swift.org/getting-started/"
+        },
+        {
+          "label": "The Swift Programming Language",
+          "url": "https://docs.swift.org/swift-book/"
+        },
+        {
+          "label": "Build a command-line tool",
+          "url": "https://www.swift.org/getting-started/cli-swiftpm/"
+        }
+      ]
+    }
   },
   {
     "id": "c",
@@ -111,7 +282,22 @@
     "sources": [
       "https://en.wikipedia.org/wiki/C_(programming_language)",
       "https://en.cppreference.com/w/c/thread"
-    ]
+    ],
+    "learn": {
+      "intro": "C has a small set of features, but you manage memory yourself, so pointers and allocation are the main things to learn. Install GCC or Clang to compile it. The classic book is Kernighan and Ritchie's The C Programming Language; free online options include the GNU C Language manual.",
+      "hello": "#include <stdio.h>\n\nint main(void) {\n    printf(\"Hello, world!\\n\");\n    return 0;\n}",
+      "run": "gcc hello.c -o hello\n./hello",
+      "resources": [
+        {
+          "label": "GNU C Language Intro and Reference",
+          "url": "https://www.gnu.org/software/c-intro-and-ref/"
+        },
+        {
+          "label": "C reference (cppreference)",
+          "url": "https://en.cppreference.com/w/c"
+        }
+      ]
+    }
   },
   {
     "id": "ruby",
@@ -127,7 +313,26 @@
       "https://en.wikipedia.org/wiki/Ruby_(programming_language)",
       "https://docs.ruby-lang.org/en/master/GC.html",
       "https://docs.ruby-lang.org/en/master/Ractor.html"
-    ]
+    ],
+    "learn": {
+      "intro": "Ruby comes with irb, an interactive shell, and the official quickstart, Ruby in Twenty Minutes, teaches the basics in it. You can also try Ruby in your browser with TryRuby before installing anything.",
+      "hello": "puts \"Hello, world!\"",
+      "run": "ruby hello.rb",
+      "resources": [
+        {
+          "label": "Ruby in Twenty Minutes",
+          "url": "https://www.ruby-lang.org/en/documentation/quickstart/"
+        },
+        {
+          "label": "TryRuby",
+          "url": "https://try.ruby-lang.org/"
+        },
+        {
+          "label": "Installing Ruby",
+          "url": "https://www.ruby-lang.org/en/documentation/installation/"
+        }
+      ]
+    }
   },
   {
     "id": "kotlin",
@@ -142,6 +347,29 @@
     "sources": [
       "https://en.wikipedia.org/wiki/Kotlin_(programming_language)",
       "https://kotlinlang.org/docs/coroutines-overview.html"
-    ]
+    ],
+    "learn": {
+      "intro": "The Kotlin Playground runs code in your browser, and Kotlin Koans are short exercises you can do there. To build locally, JetBrains' IntelliJ IDEA has Kotlin support built in, or you can use the command-line compiler.",
+      "hello": "fun main() {\n    println(\"Hello, world!\")\n}",
+      "run": "kotlinc hello.kt -include-runtime -d hello.jar\njava -jar hello.jar",
+      "resources": [
+        {
+          "label": "Get started with Kotlin",
+          "url": "https://kotlinlang.org/docs/getting-started.html"
+        },
+        {
+          "label": "Kotlin Koans",
+          "url": "https://play.kotlinlang.org/koans"
+        },
+        {
+          "label": "Kotlin Playground",
+          "url": "https://play.kotlinlang.org/"
+        },
+        {
+          "label": "Command-line compiler",
+          "url": "https://kotlinlang.org/docs/command-line.html"
+        }
+      ]
+    }
   }
 ]
