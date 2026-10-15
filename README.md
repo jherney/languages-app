@@ -73,6 +73,8 @@ Interactive API docs are at http://localhost:8000/docs while the backend is runn
 }
 ```
 
+An optional `sources` array of URLs cites where the entry's facts come from. The URLs are shown as links on the card.
+
 `concurrency` is a comma-separated list, and each item becomes its own filter option. The filter options come from the data, so new values show up automatically. The backend reads the file at startup, so restart it after editing.
 
 ## Layout

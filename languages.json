@@ -97,5 +97,51 @@
     "gc": "ARC",
     "concurrency": "async/await, threads",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/9/98/Swift_logo.svg"
+  },
+  {
+    "id": "c",
+    "name": "C",
+    "paradigm": "systems",
+    "year": 1972,
+    "creator": "Dennis Ritchie",
+    "typing": "static",
+    "gc": "none",
+    "concurrency": "threads",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg",
+    "sources": [
+      "https://en.wikipedia.org/wiki/C_(programming_language)",
+      "https://en.cppreference.com/w/c/thread"
+    ]
+  },
+  {
+    "id": "ruby",
+    "name": "Ruby",
+    "paradigm": "multi-paradigm",
+    "year": 1995,
+    "creator": "Yukihiro Matsumoto",
+    "typing": "dynamic",
+    "gc": "mark-and-sweep",
+    "concurrency": "GVL, threads, fibers, Ractors",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ruby_(programming_language)",
+      "https://docs.ruby-lang.org/en/master/GC.html",
+      "https://docs.ruby-lang.org/en/master/Ractor.html"
+    ]
+  },
+  {
+    "id": "kotlin",
+    "name": "Kotlin",
+    "paradigm": "multi-paradigm",
+    "year": 2011,
+    "creator": "JetBrains (Andrey Breslav)",
+    "typing": "static",
+    "gc": "garbage collection",
+    "concurrency": "coroutines, threads",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/7/76/Kotlin_logo_%282025%29.svg",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kotlin_(programming_language)",
+      "https://kotlinlang.org/docs/coroutines-overview.html"
+    ]
   }
 ]

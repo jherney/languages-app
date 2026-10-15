@@ -10,6 +10,7 @@ interface Language {
   gc: string
   concurrency: string
   logo: string
+  sources?: string[]
 }
 
 // "async/await, threads" -> ["async/await", "threads"]
@@ -41,6 +42,19 @@ function LanguageCard({ lang }: { lang: Language }) {
         <span className={`tag ${gcClass(lang.gc)}`}>{lang.gc}</span>
         <span className={`tag ${concurrencyClass(lang.concurrency)}`}>{lang.concurrency}</span>
       </div>
+      {lang.sources && lang.sources.length > 0 && (
+        <p className="mt-3 text-xs text-gray-400">
+          Sources:{" "}
+          {lang.sources.map((url, i) => (
+            <span key={url}>
+              {i > 0 && ", "}
+              <a href={url} target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-200">
+                {new URL(url).hostname.replace(/^www\./, "")}
+              </a>
+            </span>
+          ))}
+        </p>
+      )}
     </article>
   )
 }
